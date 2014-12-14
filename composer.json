@@ -2,7 +2,7 @@
     "name": "in2pire/utility",
     "type": "library",
     "description": "IN2PIRE Utilities",
-    "license": "GPL v2",
+    "license": "MIT",
     "keywords": ["in2pire", "inspire", "utilities"],
     "authors": [
         {
