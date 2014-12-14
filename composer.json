@@ -22,5 +22,5 @@
         "psr-0": { "In2pire\\Component\\Utility\\": "" }
     },
     "target-dir": "In2pire/Component/Utility",
-    "minimum-stability": "dev",
+    "minimum-stability": "dev"
 }
