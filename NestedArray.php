@@ -86,10 +86,10 @@ class NestedArray {
         return $ref;
     }
 
-    public static function &getValueByNamespace(array &$array, $key, $default = null)
+    public static function getValueByNamespace(array $array, $key, $default = null)
     {
         if (false === strpos($key, '.')) {
-            return array_key_exists($key, $data) ? &$data[$key] : $default;
+            return array_key_exists($key, $data) ? $data[$key] : $default;
         }
 
         list($first, $key) = explode('.', $key, 2);
@@ -98,7 +98,7 @@ class NestedArray {
             return $default;
         }
 
-        return &static::getValue($data[$first], $key, $default);
+        return static::getValue($data[$first], $key, $default);
     }
 
     /**
