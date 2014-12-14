@@ -1,0 +1,24 @@
+{
+    "name": "in2pire/in2pire-utility",
+    "type": "library",
+    "description": "IN2PIRE Utilities",
+    "license": "GPL v2",
+    "keywords": ["in2pire", "inspire", "utilities"],
+    "authors": [
+        {
+            "name": "Nhat Tran",
+            "email": "nhat.tran@inspire.vn",
+            "homepage": "http://inspire.vn",
+            "role": "Founder"
+        }
+    ],
+    "support": {
+        "email": "nhat.tran@inspire.vn"
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {"In2pire": "src/In2pire"}
+    }
+}
