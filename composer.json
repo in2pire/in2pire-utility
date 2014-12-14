@@ -19,7 +19,7 @@
         "php": ">=5.4"
     },
     "autoload": {
-        "psr-0": { "In2pire\\Component\\utility\\": "" }
+        "psr-0": { "In2pire\\Component\\Utility\\": "" }
     },
     "target-dir": "In2pire/Component/Utility",
     "minimum-stability": "dev",
