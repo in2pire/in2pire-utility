@@ -366,4 +366,38 @@ class NestedArray {
 
         return $result;
     }
+
+    /**
+     * Check array is associative.
+     *
+     * @param array $array
+     *   Array.
+     *
+     * @return boolean
+     *   True or False.
+     */
+    function isAssociative(array $array)
+    {
+        return $array !== array_values($array);
+    }
+
+    /**
+     * Check array contains subarray or object.
+     *
+     * @param array $array
+     *   Array.
+     *
+     * @return boolean
+     *   True or False.
+     */
+    function isComplex(array $array)
+    {
+        foreach ($array as $element) {
+            if (is_array($element) || is_object($element)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
