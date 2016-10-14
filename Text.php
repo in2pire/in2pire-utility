@@ -4,16 +4,16 @@
  * @file
  *
  * @package In2pire
- * @subpackage MemcachedCli
+ * @subpackage Utility
  * @author Nhat Tran <nhat.tran@inspire.vn>
  */
 
 namespace In2pire\Component\Utility;
 
 /**
- * String utility.
+ * Text utility.
  */
-class String
+class Text
 {
     /**
      * Convert a string to camel case.
