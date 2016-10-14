@@ -4,13 +4,14 @@
  * @file
  *
  * @package In2pire
- * @subpackage MemcachedCli
+ * @subpackage Utility
  * @author Nhat Tran <nhat.tran@inspire.vn>
  */
 
 namespace In2pire\Component\Utility;
 
-class NestedArray {
+class NestedArray
+{
     /**
      * Retrieves a value from a nested array with variable depth.
      *
@@ -68,7 +69,8 @@ class NestedArray {
      * @see NestedArray::setValue()
      * @see NestedArray::unsetValue()
      */
-    public static function &getValue(array &$array, array $parents, &$key_exists = null) {
+    public static function &getValue(array &$array, array $parents, &$key_exists = null)
+    {
         $ref = &$array;
 
         foreach ($parents as $parent) {
@@ -163,7 +165,8 @@ class NestedArray {
      * @see NestedArray::unsetValue()
      * @see NestedArray::getValue()
      */
-    public static function setValue(array &$array, array $parents, $value, $force = false) {
+    public static function setValue(array &$array, array $parents, $value, $force = false)
+    {
         $ref = &$array;
 
         foreach ($parents as $parent) {
@@ -238,7 +241,8 @@ class NestedArray {
      * @see NestedArray::setValue()
      * @see NestedArray::getValue()
      */
-    public static function unsetValue(array &$array, array $parents, &$key_existed = null) {
+    public static function unsetValue(array &$array, array $parents, &$key_existed = null)
+    {
         $unset_key = array_pop($parents);
         $ref = &self::getValue($array, $parents, $key_existed);
 
@@ -278,7 +282,8 @@ class NestedArray {
      *
      * @see NestedArray::getValue()
      */
-    public static function keyExists(array $array, array $parents) {
+    public static function keyExists(array $array, array $parents)
+    {
         // Although this function is similar to PHP's array_key_exists(), its
         // arguments should be consistent with getValue().
         $key_exists = null;
@@ -314,7 +319,8 @@ class NestedArray {
      *
      * @see NestedArray::mergeDeep[]
      */
-    public static function mergeDeep() {
+    public static function mergeDeep()
+    {
         return self::mergeDeepArray(func_get_args());
     }
 
@@ -344,7 +350,8 @@ class NestedArray {
      *
      * @see NestedArray::mergeDeep()
      */
-    public static function mergeDeepArray(array $arrays, $preserve_integer_keys = false) {
+    public static function mergeDeepArray(array $arrays, $preserve_integer_keys = false)
+    {
         $result = [];
 
         foreach ($arrays as $array) {
